@@ -4,7 +4,7 @@ Table of Contents
 * [Prerequisite](Prerequisite)
 * [Plan of Analysis](Plan-of-Analysis)
 * [Technical Information](Technical-Information)
-	* [Open Ports](Open Ports)
+	* [Open Ports](Open-Ports)
 	* [TCP Port Scan](TCP-Port-Scan)
 	* [UDP Port Scan](UDP-Port-Scan)
 	* [OS Detection](OS-Detection)
