@@ -1,3 +1,14 @@
+Table of Contents
+=================
+* [TP Link TL-WR841N router cybersecurity analysis](#TP-Link-TL-WR841N-router-cybersecurity-analysis)
+* [Prerequisite](Prerequisite)
+* [Plan of Analysis](Plan-of-Analysis)
+* [Technical Information](Technical-Information)
+	* [Open Ports](Open Ports)
+	* [TCP Port Scan](TCP-Port-Scan)
+	* [UDP Port Scan](UDP-Port-Scan)
+	* [OS Detection](OS-Detection)
+
 # TP Link TL-WR841N router cybersecurity analysis
 
 # Prerequisite
