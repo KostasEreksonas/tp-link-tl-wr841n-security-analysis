@@ -89,4 +89,36 @@ OS deta Linux 2.6.17 - 2.6.36
 The router is recognized as a `general purpose` device and is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
 # Known exploits
-In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For this purpose I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) webpage.
+In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For this purpose I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) webpage. First I will check for publicly disclosed vulnerabilities found within the software detected during port scan of the router.
+
+1. Dropbear sshd 2012.55:
+	* CVE-2013-4421
+	* CVE-2013-4434
+	* CVE-2016-3116
+	* CVE-2016-7406
+	* CVE-2016-7407
+	* CVE-2016-7408
+	* CVE-2016-7409
+	* CVE-2017-9079
+	* CVE-2018-15599
+2. ISC BIND 9.10.3-P4:
+	* CVE-2016-2775
+	* CVE-2016-2776
+	* CVE-2016-6170
+	* CVE-2016-8864
+	* CVE-2016-9131
+	* CVE-2016-9147
+	* CVE-2016-9444
+	* CVE-2021-25214
+	* CVE-2021-25215
+	* CVE-2021-25216
+3. TP-LINK WR841N:
+	* CVE-2017-9466
+	* CVE-2018-12574
+	* CVE-2018-12575
+	* CVE-2018-12576
+	* CVE-2018-12577
+	* CVE-2019-17147
+	* CVE-2020-35575
+	* CVE-2020-35576
+	* CVE-2020-8423
