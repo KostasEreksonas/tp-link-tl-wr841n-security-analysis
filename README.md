@@ -89,7 +89,7 @@ OS deta Linux 2.6.17 - 2.6.36
 The router is recognized as a `general purpose` device and is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
 # Known exploits
-In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For this purpose I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) webpage. First I will check for publicly disclosed vulnerabilities found within the software detected during port scan of the router.
+In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For finding this information I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. First I will check for publicly disclosed vulnerabilities found within the software detected during port scan of the router.
 
 1. Dropbear sshd 2012.55:
 	* CVE-2013-4421 - The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.
