@@ -87,7 +87,7 @@ OS CPE: cpe:/o:linux:linux_kernel:2.6
 OS deta Linux 2.6.17 - 2.6.36
 ```
 
-The router is recognized as a `general purpose` device and is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
+The router is recognized as a `general purpose` device and it is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
 # Known exploits
 In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For finding this information I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. First I will check for publicly disclosed vulnerabilities found within the software detected during port scan of the router.
