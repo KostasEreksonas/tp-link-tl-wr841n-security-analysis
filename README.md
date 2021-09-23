@@ -130,5 +130,6 @@ In this section I will gather information about known exploits, published in ***
 
 Further I plan to do the following:
 
-1. Try to exploit found vulnerabilities and see what damage I could do.
-2. Install `OpenWRT` as a firmware of the router.
+1. Use `Wireshark` to intercept and analyze network traffic.
+2. Try to exploit found vulnerabilities and see what damage I could do.
+3. Install `OpenWRT` as a firmware of the router.
