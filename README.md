@@ -15,28 +15,46 @@ Table of Contents
 
 # Prerequisite
 
-After testing the security of my IP camera I've decided to do an overview of the security of my router.
+For a final project of my Bachelor's studies I have conducted a security test of a [Besder 6024PB-XMA501 IP Camera](https://github.com/KostasEreksonas/Besder-6024PB-XMA501-ip-camera-security-investigation) and after that I have decided to do an overview of the security of the ***TP Link TL-WR841N router*** that I have used for the IP camera's security investigation. As of now, this is more of a gathering of the technical and network information about the router and gathering information about security vulnerabilities associated with the software installed within the router, as disclosed in Common Vulnerabilities and Exposures (CVE) lists. Although some time in the future I might do some more throughout security analysis of TP Link TL-WR841N router.
 
 # Plan of Analysis
 
-1. Gathering of technical information about the router.
-2. Find firmware and installed software.
-3. Check for known exploits.
-4. Check the severity of found exploits.
-5. Present the ways of how to mitigate the risks.
-6. Conclusion.
+The plan of TP Link TL-WR841N router cybersecurity analysis is as follows:
+
+1. Gather of technical and network information about the router.
+2. Intercept and analyze network traffic of the router.
+3. Find firmware and a list of software installed within the router.
+4. Check CVE lists for published known exploits found within the router's software and check their severity score.
+5. Investigate found exploits and try a practical exploitation of these vulnerabilities on a given TP Link TL-WR841N router (i.e. found or custom made scripts for exploiting a certain vulnerability) for getting a better understanding of potential risks that found vulnerabilities pose.
+6. Research the possible ways of mitigation for the given the risks.
+7. Give conclusions of the analysis.
+8. Research the possibility of using `OpenWRT` as the router's firmware.
 
 # Technical Information
 
-In this section I will present the technical information that I have gathered about tested router. It includes finding open TCP and UDP ports and detect the OS and it's version running within the router.
+In this section I will present the technical and network information that I have gathered about tested TP Link TP-WR841N router. This section includes information about:
+	1. Finding open TCP ports.
+	2. Finding open UDP ports.
+	3. Detection of the Operating System (OS) within the TP Link TL-WR841M router.
+	4. Detection of the version of the OS that is running within the TP Link TL-WR841M router.
 
 ## Open Ports
 
-In this subsection I am presenting the results of a port scan.
+In this subsection of Technical information gathering section I am presenting the results of a ***port scan*** that I have done on the tested router. For all the further scans `nmap` tool was used.
 
 ### TCP Port Scan
 
-First TCP port scan results which are presented further.
+As mentioned before, for finding open TCP ports and services that are running on top of them, `nmap` tool was used. The command for this specific scan was `nmap -v -sS -sV -sC -p- X.X.X.X`, where `X.X.X.X` is IP address of the TP Link router. Short description of every used flag is presented below:
+
+```
+-v		Verbosity. Gives more information about what the scan is doing.
+-sS		Stealth scan. Fast, accurate and non-intrusive test of a selected target.
+-sV		Version scan. Used to detect versions of services running on specific open ports of IP Camera.
+-sC		Scripts scan. Uses a default set of most common `nmap` scripts.
+-p-		Check all 65535 TCP ports for if they are open.
+```
+
+Results of this scan are presented below:
 
 ```
 PORT      STATE SERVICE VERSION
@@ -51,15 +69,15 @@ PORT      STATE SERVICE VERSION
 |_http-title: Site doesn't have a title.
 ```
 
-Nmap scan found ***4*** TCP ports - `22`, `80`, `1900` and `49152`. Some details about each port are presented below:
-1. Port `22` is a standart `ssh` port and for this service ***Dropbear sshd 2012.55*** software is used. Also a couple of ssh hostkeys were discovered.
-2. Port `80` is a standard `http` port and this service is controlled by ***TP-LINK WR841N WAP http config*** software.
-3. Port `1900` is used for `upnp` or universal plug and play service and ***ipOS upnpd*** software is used for controlling it.
-4. Port `49152` is an alternate http service run by ***Huawei HG8245T modem http config*** and it looks like a different built-in module within the router for some kind of http services.
+Nmap scan found ***4*** TCP ports whose numbers are `22`, `80`, `1900` and `49152`. Some details about each port are presented below:
+1. Port `22` is a standart port for `ssh` service and on top of this port ***Dropbear sshd 2012.55*** service is running. Also a couple of ssh hostkeys were discovered.
+2. Port `80` is a standard `http` port and is controlled by ***TP-LINK WR841N WAP http config*** software.
+3. Port `1900` is an `upnp` or ***universal plug and play*** port and is controlled by ***ipOS upnpd*** service.
+4. Port `49152` is a port for ***alternate http service*** and is controlled by ***Huawei HG8245T modem http config*** service. It looks like a different built-in module within the router for connecting to some kind of http services.
 
 ### UDP Port Scan
 
-In this section UDP port scan results are presented.
+After finding TCP ports I have conducted a search for ***UDP*** ports. Same `nmap` tool was used, although this time `-sU` flag for ***UDP scan*** was used insead of TCP stealth scan (-sS). The full command for this scan was `nmap -v -sU -sV X.X.X.X`, where `X.X.X.X` is IP address for the TP Link router. Results for this scan are presented below:
 
 ```
 PORT     STATE         SERVICE VERSION
@@ -71,14 +89,14 @@ PORT     STATE         SERVICE VERSION
 1900/udp open|filtered upnp
 ```
 
-Nmap scan found ***3*** open UDP ports - `53`, `67` and `1900`. Some details about each port are presented below:
-1. Port `53` has a `domain` service run by ***ISC BIND 9.10.3-P4*** software and it is used for some DNS related stuff. Also ***DNS recursion*** seems to be enabled. Further reading needs to be done to fully understand what it is used for and what potential risks of this service are.
-2. Port `67` is used for `dhcps` or ***Dynamic Host Configuration Protocol*** service and could be used for automatic IP network configuration.
-3. Port `1900` is used for `upnp` service. Same as it's TCP counterpart.
+Nmap scan found ***3*** open UDP ports with numbers `53`, `67` and `1900`. Some details about each port are presented below:
+1. Port `53` has a `domain` service controlled by ***ISC BIND 9.10.3-P4*** and it is used for some DNS related stuff. Also ***DNS recursion*** seems to be enabled. Further reading needs to be done to fully understand what it is used for and what could potential risks of this service be.
+2. Port `67` is controlled by `dhcps` or ***Dynamic Host Configuration Protocol*** service and could be used for automatic IP network configuration.
+3. Port `1900` is used for `upnp` or ***universal plug and play*** service, same as it's TCP counterpart.
 
 ## OS Detection
 
-In this section the results of OS detection scan are presented.
+To determine type and version of the OS installed within the TP Link router, `nmap` tool with `-O` flag was used. The full command was `nmap -v -sS -sV -O X.X.X.X`, where X.X.X.X is an IP address of TP Link router. The results of this scan are presented below:
 
 ```
 Device type: general purpose
@@ -130,6 +148,7 @@ In this section I will gather information about known exploits, published in ***
 
 Further I plan to do the following:
 
-1. Use `Wireshark` to intercept and analyze network traffic.
-2. Try to exploit found vulnerabilities and see what damage I could do.
-3. Install `OpenWRT` as a firmware of the router.
+1. Use `Wireshark` to intercept and analyze network traffic of the router.
+2. Try to practically exploit found vulnerabilities and see what potential damage could be done.
+3. Present potential fixes and mitigations of exploited vulnerabilities.
+4. Research the possibility of using `OpenWRT` as a firmware of the router.
