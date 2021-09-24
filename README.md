@@ -108,7 +108,7 @@ OS deta Linux 2.6.17 - 2.6.36
 The router is recognized as a `general purpose` device and it is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
 # Known exploits
-In this section I will gather information about known exploits, published in ***Common Vulnerabilities and Exposures (CVE)*** lists. For finding this information I plan to use [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. First I will check for publicly disclosed vulnerabilities found within the software detected during port scan of the router.
+In this section I will present information about found exploits within the TP Link TL-WR841N router's firmware and all the software installed within this router. Entry numbers and descriptions of the vulnerabilities are taken from ***Common Vulnerabilities and Exposures (CVE)*** lists. As sources for this information I have used [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. Firstly I have checked for publicly disclosed vulnerabilities found within the services detected during port scan of the TP Link router.
 
 1. ***Dropbear sshd 2012.55:***
 	* ***[CVE-2013-4421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4421)*** - The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.
