@@ -10,8 +10,9 @@ Table of Contents
 	* [TCP Port Scan](#TCP-Port-Scan)
 	* [UDP Port Scan](#UDP-Port-Scan)
 	* [OS Detection](#OS-Detection)
-* [Known exploits](#Known-exploits)
 * [Further work](#Further-work)
+* [Extra information](#Extra-information)
+	* [Known exploits](#Known-exploits)
 
 # Prerequisite
 
@@ -107,7 +108,21 @@ OS deta Linux 2.6.17 - 2.6.36
 
 The router is recognized as a `general purpose` device and it is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
-# Known exploits
+# Further work
+
+Further I plan to do the following:
+
+1. Use `Wireshark` to intercept and analyze network traffic of the router.
+2. Try to practically exploit found vulnerabilities and see what potential damage could be done.
+3. Present potential fixes and mitigations of exploited vulnerabilities.
+4. Research the possibility of using `OpenWRT` as a firmware of the router.
+
+# Extra information
+
+In this section I will present additional info in regards of the security analysis of TP Link TL-WR841N router.
+
+## Known exploits
+
 In this section I will present information about found exploits within the TP Link TL-WR841N router's firmware and all the software installed within this router. Entry numbers and descriptions of the vulnerabilities are taken from ***Common Vulnerabilities and Exposures (CVE)*** lists. As sources for this information I have used [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. Firstly I have checked for publicly disclosed vulnerabilities found within the services detected during port scan of the TP Link router.
 
 1. ***Dropbear sshd 2012.55:***
@@ -143,12 +158,3 @@ In this section I will present information about found exploits within the TP Li
 	* ***[CVE-2020-35575](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35575)*** - A password-disclosure issue in the web interface on certain TP-Link devices allows a remote attacker to get full administrative access to the web panel. This affects WA901ND devices before 3.16.9(201211) beta, and Archer C5, Archer C7, MR3420, MR6400, WA701ND, WA801ND, WDR3500, WDR3600, WE843N, WR1043ND, WR1045ND, WR740N, WR741ND, WR749N, WR802N, WR840N, WR841HP, WR841N, WR842N, WR842ND, WR845N, WR940N, WR941HP, WR945N, WR949N, and WRD4300 devices.
 	* ***[CVE-2020-35576](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35576)*** - A Command Injection issue in the traceroute feature on TP-Link TL-WR841N V13 (JP) with firmware versions prior to 201216 allows authenticated users to execute arbitrary code as root via shell metacharacters, a different vulnerability than CVE-2018-12577.
 	* ***[CVE-2020-8423](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8423)*** - A buffer overflow in the httpd daemon on TP-Link TL-WR841N V10 (firmware version 3.16.9) devices allows an authenticated remote attacker to execute arbitrary code via a GET request to the page for the configuration of the Wi-Fi network.
-
-# Further work
-
-Further I plan to do the following:
-
-1. Use `Wireshark` to intercept and analyze network traffic of the router.
-2. Try to practically exploit found vulnerabilities and see what potential damage could be done.
-3. Present potential fixes and mitigations of exploited vulnerabilities.
-4. Research the possibility of using `OpenWRT` as a firmware of the router.
