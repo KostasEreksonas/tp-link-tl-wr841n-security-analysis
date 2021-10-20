@@ -111,9 +111,11 @@ The router is recognized as a `general purpose` device and it is running a `Linu
 
 # Written Exploits
 
-In this section I will present programs for exploits that I have found in [exploit-db page](https://www.exploit-db.com/). In this page I have found two exploits for TP Link TL WR841N router:
-1. [Authenticaton Bypass exploit](https://www.exploit-db.com/exploits/44781).
-2. [Command Injection exploit](https://www.exploit-db.com/exploits/50058).
+In this section I will present an in-depth analysis of couple exploits for TP LINK TL-WR841N router that I have found in [exploit-db page](https://www.exploit-db.com/). These exploits are:
+1. [Authenticaton Bypass Exploit](https://www.exploit-db.com/exploits/44781).
+2. [Command Injection Exploit](https://www.exploit-db.com/exploits/50058).
+
+I will start with ***Authentication Bypass Exploit*** and later go to analyze ***Command Injection Exploit***.
 
 # Further Work
 
