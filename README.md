@@ -112,7 +112,7 @@ The router is recognized as a `general purpose` device and it is running a `Linu
 
 Further I plan to do the following:
 
-1. Use `Wireshark` to intercept and analyze network traffic of the router.
+1. Search for pre-made exploits of TP Link TL WR841N router.
 2. Try to practically exploit found vulnerabilities and see what potential damage could be done.
 3. Present potential fixes and mitigations of exploited vulnerabilities.
 4. Research the possibility of using `OpenWRT` as a firmware of the router.
