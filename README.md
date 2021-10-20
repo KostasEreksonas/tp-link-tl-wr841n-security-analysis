@@ -10,9 +10,10 @@ Table of Contents
 	* [TCP Port Scan](#TCP-Port-Scan)
 	* [UDP Port Scan](#UDP-Port-Scan)
 	* [OS Detection](#OS-Detection)
-* [Further work](#Further-work)
-* [Extra information](#Extra-information)
-	* [Known exploits](#Known-exploits)
+* [Written Exploits](#Written-Exploits)
+* [Further Work](#Further-Work)
+* [Extra Information](#Extra-Information)
+	* [Other Exploits](#Other-Exploits)
 
 # Prerequisite
 
@@ -108,7 +109,13 @@ OS deta Linux 2.6.17 - 2.6.36
 
 The router is recognized as a `general purpose` device and it is running a `Linux 2.6` operating system with likely version ranging from `2.6.17` to `2.6.36`.
 
-# Further work
+# Written Exploits
+
+In this section I will present programs for exploits that I have found in [exploit-db page](https://www.exploit-db.com/). In this page I have found two exploits for TP Link TL WR841N router:
+1. [Authenticaton Bypass exploit](https://www.exploit-db.com/exploits/44781).
+2. [Command Injection exploit](https://www.exploit-db.com/exploits/50058).
+
+# Further Work
 
 Further I plan to do the following:
 
@@ -117,13 +124,13 @@ Further I plan to do the following:
 3. Present potential fixes and mitigations of exploited vulnerabilities.
 4. Research the possibility of using `OpenWRT` as a firmware of the router.
 
-# Extra information
+# Extra Information
 
 In this section I will present additional info in regards of the security analysis of TP Link TL-WR841N router.
 
-## Known exploits
+## Other Exploits
 
-In this section I will present information about found exploits within the TP Link TL-WR841N router's firmware and all the software installed within this router. Entry numbers and descriptions of the vulnerabilities are taken from ***Common Vulnerabilities and Exposures (CVE)*** lists. As sources for this information I have used [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. Firstly I have checked for publicly disclosed vulnerabilities found within the services detected during port scan of the TP Link router.
+In this section I will present information about found exploits within the ***TP Link TL-WR841N*** router's firmware and all the software installed within this router. Entry numbers and descriptions of the vulnerabilities are taken from ***Common Vulnerabilities and Exposures (CVE)*** lists. As sources for this information I have used [cve.mitre.org](https://cve.mitre.org/cve/) and [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln) webpages. Firstly I have checked for publicly disclosed vulnerabilities found within the services detected during port scan of the TP Link router.
 
 1. ***Dropbear sshd 2012.55:***
 	* ***[CVE-2013-4421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4421)*** - The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.
