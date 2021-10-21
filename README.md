@@ -11,6 +11,8 @@ Table of Contents
 	* [UDP Port Scan](#UDP-Port-Scan)
 	* [OS Detection](#OS-Detection)
 * [Written Exploits](#Written-Exploits)
+	* [Authentication Bypass Exploit](#Authentication-Bypass-Exploit)
+	* [Command Injection Exploit](#Command-Injection-Exploit)
 * [Further Work](#Further-Work)
 * [Extra Information](#Extra-Information)
 	* [Other Exploits](#Other-Exploits)
@@ -116,6 +118,14 @@ In this section I will present an in-depth analysis of couple exploits for TP LI
 2. [Command Injection Exploit](https://www.exploit-db.com/exploits/50058).
 
 I will start with ***Authentication Bypass Exploit*** and later go to analyze ***Command Injection Exploit***.
+
+## Authentication Bypass Exploit
+
+A section for Authentication Bypass Exploit analysis.
+
+## Command Injection Exploit
+
+A section for Command Injection Exploit analysis.
 
 # Further Work
 
