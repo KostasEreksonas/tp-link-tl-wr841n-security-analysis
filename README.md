@@ -121,7 +121,7 @@ I will start with ***Authentication Bypass Exploit*** and later go to analyze **
 
 ## Authentication Bypass Exploit
 
-A section for Authentication Bypass Exploit analysis.
+This exploit was written by BlackFog team at [SecureLayer7.net](https://www.SecureLayer7.net/)..
 
 ## Command Injection Exploit
 
