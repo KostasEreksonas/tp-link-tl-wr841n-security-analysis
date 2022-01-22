@@ -124,7 +124,9 @@ I will start with ***Authentication Bypass Exploit*** and later go to analyze **
 
 ## Authentication Bypass Exploit
 
-This exploit was written by BlackFog team at [SecureLayer7.net](https://www.SecureLayer7.net/)..
+This exploit, found on [Exploit-db](https://www.exploit-db.com/exploits/44781) was written by BlackFog team at [SecureLayer7.net](https://www.SecureLayer7.net/). If the Referer Header is set as `http://192.168.0.1/mainFrame.htm`, then no authentication is needed for following commands. Although, this exploit did not work for my router.
+
+![Failed Auth Bypass](/images/Failed_Auth_Bypass.png)
 
 ## Command Injection Exploit
 
