@@ -6,7 +6,6 @@ Github Pages version of this analysis can be found by [following this link](http
 Table of Contents
 =================
 * [TP Link TL-WR841N router cybersecurity analysis](#TP-Link-TL-WR841N-router-cybersecurity-analysis)
-* [Prerequisite](#Prerequisite)
 * [Plan of Analysis](#Plan-of-Analysis)
 * [Technical Information](#Technical-Information)
 	* [Open Ports](#Open-Ports)
@@ -17,10 +16,6 @@ Table of Contents
 	* [Authentication Bypass Exploit](#Authentication-Bypass-Exploit)
 	* [Command Injection Exploit](#Command-Injection-Exploit)
 * [Further Work](#Further-Work)
-
-# Prerequisite
-
-For a final project of my Bachelor's studies I have conducted a security test of a [Besder 6024PB-XMA501 IP Camera](https://github.com/KostasEreksonas/Besder-6024PB-XMA501-ip-camera-security-investigation) and after that I have decided to do an overview of the security of the ***TP Link TL-WR841N router*** that I have used for the IP camera's security investigation. As of now, this is more of a gathering of the technical and network information about the router and gathering information about security vulnerabilities associated with the software installed within the router, as disclosed in Common Vulnerabilities and Exposures (CVE) lists. Although some time in the future I might do some more throughout security analysis of TP Link TL-WR841N router.
 
 # Plan of Analysis
 
