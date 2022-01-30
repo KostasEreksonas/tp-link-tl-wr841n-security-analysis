@@ -123,7 +123,13 @@ This exploit, found on [Exploit-db](https://www.exploit-db.com/exploits/44781) w
 
 ## Command Injection Exploit
 
-A section for Command Injection Exploit analysis.
+For now I have tried to run the Python script found in the Exploit-db link but it did not work.
+
+![Failed Injection](/images/Failed_Injection.png)
+
+# Code analysis
+
+In this section I will analyze the [Index page source code](/scripts/login.js) and [linked encryption file](/scripts/encrypt.js) javascript code files.
 
 # Further Work
 
