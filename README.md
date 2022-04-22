@@ -15,7 +15,6 @@ Table of Contents
 * [Written Exploits](#Written-Exploits)
 	* [Authentication Bypass Exploit](#Authentication-Bypass-Exploit)
 	* [Command Injection Exploit](#Command-Injection-Exploit)
-* [Further Work](#Further-Work)
 
 # Plan of Analysis
 
@@ -130,12 +129,3 @@ For now I have tried to run the Python script found in the Exploit-db link but i
 # Code analysis
 
 In this section I will analyze the [Index page source code](/scripts/login.js) and [linked encryption file](/scripts/encrypt.js) javascript code files.
-
-# Further Work
-
-Further I plan to do the following:
-
-1. Search for pre-made exploits of TP Link TL WR841N router.
-2. Try to practically exploit found vulnerabilities and see what potential damage could be done.
-3. Present potential fixes and mitigations of exploited vulnerabilities.
-4. Research the possibility of using `OpenWRT` as a firmware of the router.
